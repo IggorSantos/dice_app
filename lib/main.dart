@@ -19,24 +19,26 @@ class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: Row(
+          child: Row(
         children: <Widget>[
           Expanded(
-          child: Padding(
-            padding: EdgeInsets.all(16),
-            child: Image.asset('images/dice1.png'),//Uma Forma mais simples de escrever o mesmo codigo abaixo
+            child: FlatButton(
+              onPressed: (){
+                print('Botão esquerdo foi clicado!');
+              },
+              child: Image.asset('images/dice1.png'), //Uma Forma mais simples de escrever o mesmo codigo abaixo
             ),
           ),
           Expanded(
-            child: Padding(
-              padding: EdgeInsets.all(16),
-              child: Image(
-              image: AssetImage('images/dice1.png')
-              ),
+            child: FlatButton(
+              onPressed: (){
+                print('Botão direito foi clicado!');
+              },
+              child: Image(image: AssetImage('images/dice1.png')),
             ),
           ),
         ],
-      )
-   );
+      ),
+    );
   }
 }
